@@ -1,4 +1,3 @@
 void main() {
-    print('Hello Holberton!');
-    print('');
+    print('Hello Holberton!\n');
 }
