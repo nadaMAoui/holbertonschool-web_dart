@@ -1,1 +1,3 @@
-vscode-remote://wsl%2Bubuntu-20.04/home/nada/cyber_security/holbertonschool-web_dart/0x00-hello-dart
+void main() {
+  print("Hello Holberton!\n");
+}
