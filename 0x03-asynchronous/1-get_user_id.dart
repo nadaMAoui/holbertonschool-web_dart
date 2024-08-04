@@ -1,15 +1,13 @@
+import '1-util.dart';
 import 'dart:convert';
 
-Future<String> fetchUserData() => Future.delayed(
-      const Duration(seconds: 2),
-      () =>
-          '{"id" : "7ee9a243-01ca-47c9-aa14-0149789764c3", "username" : "admin"}',
-    );
+Future<String> getUserId() async {
+  final userData = await fetchUserData();
+  final decodedData = jsonDecode(userData);
+  final userId = decodedData['id'];
+  return userId;
+}
 
-getUserId() async {
-  var strRepr = await fetchUserData();
-
-  var Repr  = json.decode(strRepr);
-
-  return Repr["id"];
+void main() async {
+  print(await getUserId());
 }
